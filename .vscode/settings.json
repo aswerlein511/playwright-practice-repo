@@ -1,0 +1,7 @@
+{
+  "prettier.printWidth": 120,
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
