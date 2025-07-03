@@ -12,7 +12,7 @@
     "outDir": "dist",
     "types": ["vitest/globals", "node"]
   },
-  "exclude": ["dist", "node_modules", "playwright-report", "test-results"],
+  "exclude": ["dist", "node_modules", "playwright-report", "test-results", "utils", "scripts"],
   "include": ["tests", "pages", "playwright.config.ts", "vitest.config.ts"]
 
 }
