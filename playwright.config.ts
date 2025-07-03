@@ -28,13 +28,13 @@ export default defineConfig({
       name: "Desktop Chrome",
       use: devices["Desktop Chrome"],
     },
-    {
-      name: "Pixel 5",
-      use: devices["Pixel 5"],
-    },
-    {
-      name: "iPhone 13",
-      use: devices["iPhone 13"],
-    },
+    // {
+    //   name: "Pixel 5",
+    //   use: devices["Pixel 5"],
+    // },
+    // {
+    //   name: "iPhone 13",
+    //   use: devices["iPhone 13"],
+    // },
   ],
 });
