@@ -1,12 +1,15 @@
 // utils/deviceHelper.ts
-import { chromium, devices, BrowserContext, Page } from '@playwright/test';
-import { BasePage } from '../pages/BasePage';
+import { chromium, devices, BrowserContext, Page, Browser } from '@playwright/test';
 
-const iPhone12 = devices['iPhone 12'];
+export async function getMobileContextAndPage(deviceName: keyof typeof devices): Promise<{ browser: Browser; context: BrowserContext; page: Page }> {
+  const device = devices[deviceName];
+  if (!device) {
+    throw new Error(`Device "${deviceName}" is not a valid Playwright device.`);
+  }
 
-export async function getMobileContextAndPage(): Promise<{ context: BrowserContext; page: Page }> {
   const browser = await chromium.launch();
-  const context = await browser.newContext({ ...iPhone12 });
+  const context = await browser.newContext({ ...device });
   const page = await context.newPage();
-  return { context, page };
+
+  return { browser, context, page };
 }
